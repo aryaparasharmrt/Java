@@ -1,0 +1,6 @@
+ALTER TABLE public.invoices ADD fixed_dg_mmc_per_kva_rate float8 DEFAULT 0.0 NOT NULL;
+ALTER TABLE public.site ADD dg_fixed_mmc_per_kva float8 DEFAULT 0.0 NOT NULL;
+ALTER TABLE public.invoices ADD water_chrge_rate float8 DEFAULT 0.0 NOT NULL;
+ALTER TABLE customers ADD sms_preference boolean default true NOT NULL;
+ALTER TABLE public.customers ADD updated_on timestamp NULL;
+
