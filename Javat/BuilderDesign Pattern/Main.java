@@ -21,9 +21,9 @@ class Car{
 	    private int seater;
 	    private String modal;
 		
-		public CarBuilder engine(int engine) {
+		public void engine(int engine) {
 			this.engine = engine;
-			return this;
+			return;
 		}
 		
 		public CarBuilder seater(int seater) {
@@ -44,26 +44,26 @@ class Car{
 
 public class Main {
 	public static void main(String[] args) {
-		Car.CarBuilder car1 = Car.builder();
+		Car car1 = Car.builder()
+		          .engine(1300)
+//				  .seater(4)
+//				  .modal("Maruti Etriga 2022")
+				  .build();
+				  
+//		Car.CarBuilder car2 = Car.builder();
 //		          .engine(1300)
 //				  .seater(4)
 //				  .modal("Maruti Etriga 2022")
 //				  .build();
 				  
-		Car.CarBuilder car2 = Car.builder();
-//		          .engine(1300)
-//				  .seater(4)
-//				  .modal("Maruti Etriga 2022")
-//				  .build();
-				  
-//		System.out.println("Engine: "+ car1.engine);
-//		System.out.println("Seater: "+ car1.seater);
-//		System.out.println("Modal: "+ car1.modal);
-		System.out.println("car1 base address: "+System.identityHashCode(car1));
+		System.out.println("Engine: "+ car1.engine);
+		System.out.println("Seater: "+ car1.seater);
+		System.out.println("Modal: "+ car1.modal);
+//		System.out.println("car1 base address: "+System.identityHashCode(car1));
 		System.out.println("\n");
 //	    System.out.println("Engine: "+ car1.engine);
 //		System.out.println("Seater: "+ car1.seater);
 //		System.out.println("Modal: "+ car1.modal);
-		System.out.println("car2 base address: "+System.identityHashCode(car2));
+//		System.out.println("car2 base address: "+System.identityHashCode(car2));
 	}
 }
